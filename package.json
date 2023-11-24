@@ -1,6 +1,6 @@
 {
   "name": "@hancleee/babel-plugin-react-native-pxtodp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react native px to dp",
   "main": "lib/index.js",
   "files": [
