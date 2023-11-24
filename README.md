@@ -8,7 +8,7 @@
                     
 #### 安装
 ```
-npm install @hancle/babel-plugin-react-native-pxtodp -D
+npm install @hancleee/babel-plugin-react-native-pxtodp -D
 ```
 
 #### 配置
@@ -16,7 +16,7 @@ npm install @hancle/babel-plugin-react-native-pxtodp -D
 module.exports = {
   plugins: [
 	// ... 其他配置
-	['@hancle/babel-plugin-react-native-pxtodp',
+	['@hancleee/babel-plugin-react-native-pxtodp',
 		{
 			uiWidth: 750,
 			includes: ['src/views/'],

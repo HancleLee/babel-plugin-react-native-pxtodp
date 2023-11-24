@@ -1,5 +1,5 @@
 {
-  "name": "@hancle/babel-plugin-react-native-pxtodp",
+  "name": "@hancleee/babel-plugin-react-native-pxtodp",
   "version": "1.0.4",
   "description": "react native px to dp",
   "main": "lib/index.js",
@@ -7,15 +7,16 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "test:babel": "node ./test/index.js"
   },
   "keywords": [
     "react native",
-    "pxtodp"
+    "pxtodp",
+    "px2dp"
   ],
   "author": "Hancle",
   "license": "ISC",
+  "homepage": "https://github.com/HancleLee/babel-plugin-react-native-pxtodp#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
