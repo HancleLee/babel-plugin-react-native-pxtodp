@@ -14,8 +14,16 @@
     "react native",
     "pxtodp"
   ],
-  "author": "",
+  "author": "Hancle",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HancleLee/babel-plugin-react-native-pxtodp.git"
+  },
   "dependencies": {
     "@babel/helper-plugin-utils": "^7.22.5",
     "@babel/core": "^7.12.9",

@@ -82,12 +82,15 @@ export const Test = () => {
 const styles = StyleSheet.create({
   container: {
     fontSize: "10rpx",
-    // sss
-    width: '200',
-    // not transform11
+    // ignore_px_to_dp
+    width: 200,
+    height: 400,
+    // ignore_px_to_dp
+    borderRadius: 2,
+    // this is bg color
     backgroundColor: "pink",
     // ignore pxToDp
-    minHeight: `${10 + 10}`, // ignnnn
+    minHeight: `${10 + 10}`,
     minWidth: pxToDp(293)
   }
 });
