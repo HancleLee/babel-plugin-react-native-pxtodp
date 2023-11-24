@@ -15,16 +15,16 @@ npm install @hancle/babel-plugin-react-native-pxtodp -D
 ```javascript
 module.exports = {
   plugins: [
-		// ... 其他配置
-		['@hancle/babel-plugin-react-native-pxtodp',
-			{
-				uiWidth: 750,
-				includes: ['src/views/'],
-				excludes: [],
-				superIncludes: [],
-				extraKeyNames: []
-			},
-		],
+	// ... 其他配置
+	['@hancle/babel-plugin-react-native-pxtodp',
+		{
+			uiWidth: 750,
+			includes: ['src/views/'],
+			excludes: [],
+			superIncludes: [],
+			extraKeyNames: []
+		},
+	],
   ],
 }
 ```
@@ -35,12 +35,12 @@ module.exports = {
 *如下：*
 ```javascript
 const styles = StyleSheet.create({
-	  container: {
-			// ignore_px_to_dp
-			width: 200,
-			// ignore_px_to_dp
-			height: 400,
-	  }
+	container: {
+		// ignore_px_to_dp
+		width: 200,
+		// ignore_px_to_dp
+		height: 400,
+	}
 });
 
 ```
