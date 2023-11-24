@@ -1,24 +1,29 @@
-import { StyleSheet } from 'react-native'
-import { b } from 'ff'
-function test() {
-    console.log('test', b)
-}
+const { transformFromAstSync } = require("@babel/core");
+const parser = require("@babel/parser");
+const plugin = require("../lib/index");
+const fs = require("fs");
+const path = require("path");
 
-const s = StyleSheet.create({
-    main: {
-        height: 23,
-        width: 10,
-        a: 88,
-    },
-    width: {
-        width: 1,
-        y: 2
-    }
-})
+const sourceCode = fs.readFileSync(path.join(__dirname, "./sourceCode.js"), {
+  encoding: "utf-8"
+});
 
-const tp = {
-    main: {
-        width: 1,
-        y: 2
-    }
-}
+const ast = parser.parse(sourceCode, {
+  sourceType: "unambiguous",
+  plugins: ["jsx"]
+});
+
+const { code } = transformFromAstSync(ast, sourceCode, {
+  filename: path.join(__dirname, "./sourceCode.js"),
+  plugins: [
+    [
+      plugin,
+      {
+        uiWidth: 750,
+        includes: ["sourceCode"]
+      }
+    ]
+  ]
+});
+
+console.log("code", code);
