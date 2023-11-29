@@ -1,3 +1,5 @@
+React Native屏幕适配方案，自动px转化成dp
+
 ### 主要特性
 
 - React Native屏幕适配方案
@@ -29,8 +31,22 @@ module.exports = {
 }
 ```
 
-#### 设置特定代码不转化
-> 在样式前面加上注释 `// ignore_px_to_dp` 则不转化
+#### 设置特定文件豁免
+> 在文件顶部加上注释 `// diable-react-native-px-to-dp-file` 则不对该文件做单位转化
+
+*如下：*
+```javascript
+// diable-react-native-px-to-dp-file
+const styles = StyleSheet.create({
+	container: {
+		width: 200,
+		height: 400,
+	}
+});
+```
+
+#### 设置特定代码豁免
+> 在样式前面加上注释 `// ignore_px_to_dp` 则不对该样式做单位转化
 
 *如下：*
 ```javascript
@@ -42,7 +58,6 @@ const styles = StyleSheet.create({
 		height: 400,
 	}
 });
-
 ```
 
                 
