@@ -27,3 +27,30 @@ const { code } = transformFromAstSync(ast, sourceCode, {
 });
 
 console.log("code", code);
+
+console.log('\n*********************************************************************************\n')
+
+const ignoreSourceCode = fs.readFileSync(path.join(__dirname, "./ignoreSourceCode.js"), {
+  encoding: "utf-8"
+});
+
+const ignoreAst = parser.parse(ignoreSourceCode, {
+  sourceType: "unambiguous",
+  plugins: ["jsx"]
+});
+
+const { code: ignoreCode } = transformFromAstSync(ignoreAst, ignoreSourceCode, {
+  filename: path.join(__dirname, "./ignoreSourceCode.js"),
+  plugins: [
+    [
+      plugin,
+      {
+        uiWidth: 750,
+        includes: ["ignoreSourceCode"]
+      }
+    ]
+  ]
+});
+
+console.log("ignoreCode: \n", ignoreCode);
+
