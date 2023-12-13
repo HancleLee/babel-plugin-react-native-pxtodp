@@ -23,6 +23,7 @@ const page = () => {
 const myWidth = 300
 const myHeight = 20
 const fontSize = 10 + 10;
+const percent = 80
 
 const page1 = () => {
   return (
@@ -32,7 +33,8 @@ const page1 = () => {
         height: myHeight,
         backgroundColor: 'red',
         fontSize: `${fontSize}`,
-        minHeight: `${10 + 10}`
+        minHeight: `${10 + 10}`,
+        minWidth: `${percent}%`,
       }}
     />
   )
