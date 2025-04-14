@@ -15,6 +15,7 @@ npm install @hancleee/babel-plugin-react-native-pxtodp -D
 
 #### 配置
 ```javascript
+// babel.config.js
 module.exports = {
   plugins: [
 	// ... 其他配置
